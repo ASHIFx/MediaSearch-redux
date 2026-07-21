@@ -16,7 +16,7 @@ const Homepage = () => {
         <ResultGrid/>
         </>
         :
-        <div className='text-center mt-3 text-2xl font-semibold'>
+        <div className='text-center mt-3 text-2xl font-semibold h-screen bg-(--c3)'>
           Search Something
         </div>
         }
