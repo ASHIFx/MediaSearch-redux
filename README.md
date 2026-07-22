@@ -1,30 +1,28 @@
 # Search Photo
 
-Search Photo is a modern React application for discovering and saving media content such as photos, videos, and GIFs. The project combines Redux Toolkit for predictable state management, React Router for navigation, and Tailwind CSS for a clean, responsive UI.
+Search Photo is a React-based media discovery app that lets users search for photos, videos, and GIFs, then save their favorites into a personal collection. It is built with React, Redux Toolkit, React Router, Tailwind CSS, and Vite.
 
-## Overview
+## What this project does
 
-This application allows users to:
-- Search for media using multiple public APIs
-- Switch between photo, video, and GIF results
-- Save favorite items to a personal collection
-- Remove or clear saved items when needed
-- Keep their collection persisted in the browser with local storage
+This app provides a simple and modern experience for:
+- searching media from multiple public APIs
+- viewing results in a responsive grid
+- switching between photo, video, and GIF categories
+- saving items to a collection for later use
+- removing or clearing saved items instantly
 
-The interface is designed to feel simple and polished while keeping the underlying architecture easy to understand and extend.
+## Main features
 
-## Key Features
-
-- Responsive media search experience
-- Tab-based filtering for photos, videos, and GIFs
-- Redux-powered state management for search and collection flows
-- Persistent collection storage with localStorage
+- Fast and responsive media search UI
+- Category tabs for photos, videos, and GIFs
+- Persistent collection using browser local storage
+- Redux-powered state management
 - Toast notifications for save and remove actions
-- Clean, card-based layout for browsing results
+- Clean card-based interface for browsing results
 
-## Tech Stack
+## Tech stack
 
-- React 19
+- React
 - Redux Toolkit
 - React Router DOM
 - Axios
@@ -33,7 +31,7 @@ The interface is designed to feel simple and polished while keeping the underlyi
 - Vite
 - ESLint
 
-## Project Structure
+## Project structure
 
 ```text
 src/
@@ -41,6 +39,8 @@ src/
 │   └── mediaApi.js
 ├── components/
 │   ├── CollectionCard.jsx
+│   ├── Error.jsx
+│   ├── Loading.jsx
 │   ├── Navbar.jsx
 │   ├── ResultCard.jsx
 │   ├── ResultGrid.jsx
@@ -59,7 +59,7 @@ src/
 └── index.css
 ```
 
-## Installation
+## Setup instructions
 
 1. Clone the repository
 2. Install dependencies:
@@ -68,7 +68,7 @@ src/
 npm install
 ```
 
-3. Create a local environment file named `.env.local` in the project root and add your API keys:
+3. Create a `.env.local` file in the project root and add your API keys:
 
 ```env
 VITE_UNSPLASH_KEY=your_unsplash_api_key
@@ -76,41 +76,40 @@ VITE_PEXELS_KEY=your_pexels_api_key
 VITE_GIPHY_KEY=your_giphy_api_key
 ```
 
-4. Start the development server:
+4. Start the app locally:
 
 ```bash
 npm run dev
 ```
 
-## Available Scripts
+## Available scripts
 
 - `npm run dev` — start the development server
-- `npm run build` — build the app for production
+- `npm run build` — build the project for production
 - `npm run preview` — preview the production build locally
 - `npm run lint` — run ESLint checks
 
-## Application Flow
+## How the app works
 
-1. The user enters a search query.
-2. The search slice stores the query and active tab.
-3. The API layer fetches data from Unsplash, Pexels, or Giphy.
-4. Results are displayed in a responsive card grid.
-5. Users can save media to the collection, which is managed through Redux and persisted in localStorage.
+1. The user enters a search term.
+2. The search state is updated through Redux.
+3. The API layer requests data from Unsplash, Pexels, or Giphy.
+4. Results are displayed in a responsive list of cards.
+5. Users can save selected items into the collection, which is persisted in local storage.
 
-## State Management
+## State management
 
-The app uses two main Redux slices:
-
-- `search` — manages search input, active tab, results, loading state, and errors
-- `collection` — manages saved items and toast-based feedback
+The app uses two Redux slices:
+- `search` for query, tab selection, results, loading, and errors
+- `collection` for saved items and feedback toasts
 
 ## Notes
 
-- API keys are required for search functionality.
-- The collection persists across browser refreshes using localStorage.
-- Toast messages provide instant feedback when an item is added or removed.
+- API keys are required for media search to work.
+- Saved items remain available after page refreshes because they are stored in local storage.
+- Toast notifications provide quick feedback when items are added or removed.
 
 ## License
 
-This project is open for educational and personal use.
+This project is intended for learning and personal development purposes.
 
