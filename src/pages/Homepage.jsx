@@ -1,7 +1,7 @@
 import React from 'react'
-import SearchBar from '../component/SearchBar'
-import Tabs from '../component/Tabs'
-import ResultGrid from '../component/ResultGrid'
+import SearchBar from '../components/SearchBar'
+import Tabs from '../components/Tabs'
+import ResultGrid from '../components/ResultGrid'
 import { useSelector } from 'react-redux'
 
 const Homepage = () => {

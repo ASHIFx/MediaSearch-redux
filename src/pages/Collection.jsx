@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { clearCollection } from '../redux/features/CollectionSlice'
-import CollectionCard from '../component/CollectionCard'
+import CollectionCard from '../components/CollectionCard'
 
 const Collection = () => {
   const dispatch = useDispatch()

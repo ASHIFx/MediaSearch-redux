@@ -39,7 +39,7 @@ The interface is designed to feel simple and polished while keeping the underlyi
 src/
 ├── api/
 │   └── mediaApi.js
-├── component/
+├── components/
 │   ├── CollectionCard.jsx
 │   ├── Navbar.jsx
 │   ├── ResultCard.jsx

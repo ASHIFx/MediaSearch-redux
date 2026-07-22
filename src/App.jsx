@@ -2,7 +2,7 @@ import React from 'react'
 import Collection from "./pages/Collection";
 import Homepage from "./pages/Homepage";
 import { Route, Routes } from 'react-router-dom';
-import Navbar from './component/Navbar';
+import Navbar from './components/Navbar';
 import { ToastContainer } from 'react-toastify';
 
 const App = () => {
