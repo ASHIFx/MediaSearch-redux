@@ -3,6 +3,8 @@ import { fetchPhotos, fetchVideos, fetchGif } from '../api/mediaApi'
 import { setLoading, setError, setResults } from '../redux/features/SearchSlice'
 import { useEffect } from 'react'
 import ResultCard from './ResultCard'
+import Error from './Error'
+import Loading from './Loading'
 
 const ResultGrid = () => {
     const dispatch = useDispatch();
@@ -11,7 +13,7 @@ const ResultGrid = () => {
     useEffect(function(){
         const getData = async () => {
             try{
-                dispatch(setLoading())
+                dispatch(setLoading(true))
                 let data = []
                 if(activeTab=='photos'){
                     let response = await fetchPhotos(query)
@@ -56,8 +58,8 @@ const ResultGrid = () => {
         getData()
     }, [query, activeTab, dispatch])
 
-    if(error) return <h1>error</h1>
-    if(loading) return <h1>loading</h1>
+    if(error) return <Error/>
+    if(loading) return <Loading/>
 
     return (
         <div className="bg-(--c3) w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

@@ -3,6 +3,7 @@ import Collection from "./pages/Collection";
 import Homepage from "./pages/Homepage";
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './component/Navbar';
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route path='/' element={<Homepage />} />
         <Route path='/collection' element={<Collection />} />
       </Routes>
+      <ToastContainer />
     </div>
   )
 }

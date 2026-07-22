@@ -8,7 +8,6 @@ const SearchBar = () => {
     const submitHandler = (e) => {
         e.preventDefault()
         dispatch(setQuery(text))
-        setText('')
     }
   return (
     <div>

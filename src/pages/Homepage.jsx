@@ -8,7 +8,7 @@ const Homepage = () => {
 
   const { query } = useSelector((store)=> store.search)
   return (
-    <div>
+    <div className='bg-(--c3) h-screen'>
         <SearchBar/>
         {query != ''?
         <>
